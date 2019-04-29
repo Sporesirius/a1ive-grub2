@@ -3130,6 +3130,33 @@ module = {
 };
 
 module = {
+  name = wimboot;
+  cflags = '-fshort-wchar -Wno-pointer-arith -Wno-vla';
+  cppflags = '-I$(srcdir)/wimboot';
+  common = wimboot/wimboot.c;
+  common = wimboot/cpio.c;
+  common = wimboot/efi.c;
+  common = wimboot/efiblock.c;
+  common = wimboot/efiboot.c;
+  common = wimboot/efifile.c;
+  common = wimboot/efiguid.c;
+  common = wimboot/efipath.c;
+  common = wimboot/huffman.c;
+  common = wimboot/lznt1.c;
+  common = wimboot/lzx.c;
+  common = wimboot/pause.c;
+  common = wimboot/sha1.c;
+  common = wimboot/string.c;
+  common = wimboot/vdisk.c;
+  common = wimboot/wim.c;
+  common = wimboot/wimfile.c;
+  common = wimboot/wimpatch.c;
+  common = wimboot/xca.c;
+  enable = i386_efi;
+  enable = x86_64_efi;
+};
+
+module = {
   name = sbpolicy;
   common = commands/efi/sbpolicy.c;
   enable = efi;
