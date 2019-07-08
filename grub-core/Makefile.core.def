@@ -3140,3 +3140,11 @@ module = {
   enable = i386_efi;
   enable = x86_64_efi;
 };
+
+module = {
+  name = map;
+  common = map/map.c;
+  common = map/block.c;
+  common = map/eltorito.c;
+  enable = efi;
+};
